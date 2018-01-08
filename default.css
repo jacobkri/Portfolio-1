@@ -12,7 +12,7 @@ nav ol, nav ul {list-style-type:none;}
 article p {font-size:1.2em;margin:0 0 1em;font-family:"Open Sans", sans-serif;}
 h1 {font-size:2.9em;font-family: "Times New Roman", serif;}
 h2,h3 {font-size:1.5em;color:rgb(40,40,40);font-family: "Open Sans", sans-serif;}
-h3 {padding: 0 0 0 1em;}
+section section {padding:1em;}
 img,video,iframe,table {margin:1em;max-width:95%;}
 .width_control {max-width:1400px;position:relative;margin:0 auto;}
 a:link {text-decoration:none;color:rgb(100,100,245);}
