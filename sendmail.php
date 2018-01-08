@@ -2,7 +2,7 @@
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
   header("HTTP/1.1 400 BAD REQUEST");
-  echo '<!doctype html><html lang="en"><head><title>Bad Request</title></head><body><h1>Illigal request</h1><p>The request was formed incorrectly</p></body></html>';exit();
+  echo '<!doctype html><html lang="da"><head><title>Ugyldig anmodning</title></head><body><h1>Ugyldig anmodning</h1><p>Serveren forstod ikke din anmodning.</p></body></html>';exit();
 }
 
 if ((!isset($_POST['name'])) || (!isset($_POST['email'])) || (!isset($_POST['msg_src']))){
@@ -61,7 +61,6 @@ header("Cache-Control: no cache");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
-    <link rel="icon" href="img/icon_3.png">
     <title>Kontakt</title>
 </head>
 
