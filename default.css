@@ -1,6 +1,118 @@
 * {margin:0;padding:0;}
-ol, ul {padding:2em;}nav ol, nav ul {list-style-type:none;}
-article p {font-size:1.2em;}
-h1 {font-size:1.7em;}
-h2 {font-size:1.5em;}
+html {height:100%;}
+body {letter-spacing:0.05em;min-width:400px;background:rgb(245,245,245);
+	text-align:center;font-size:16px;overflow-x:hidden;min-height:100%;color:rgb(70,70,70);
+position:relative;overflow-y:scroll;}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('OpenSans-Regular.woff2') format('woff2'),
+       url('OpenSans-Regular.ttf') format('truetype');
+}
+nav ol, nav ul {list-style-type:none;}
+article p {font-size:1.2em;margin:0 0 1em;font-family:"Open Sans", sans-serif;}
+h1 {font-size:2.9em;font-family: "Times New Roman", serif;}
+h2,h3 {font-size:1.5em;color:rgb(40,40,40);font-family: "Open Sans", sans-serif;}
+h3 {padding: 0 0 0 1em;}
 img,video,iframe,table {margin:1em;max-width:95%;}
+.width_control {max-width:1400px;position:relative;margin:0 auto;}
+a:link {text-decoration:none;color:rgb(100,100,245);}
+a:visited {color:rgb(100,100,245);}
+a:hover {color:rgb(245,100,100);}
+
+/* Links on frontpage */
+.introduction_links {font-size:2em;list-style-type:none;width:100%;padding:1.5em 0 1.5em;}
+.introduction_links a {display:block;line-height:2em;font-weight:bold;letter-spacing:0.1em;transition:color 0.5s,text-shadow 0.5s ease-in-out;}
+.introduction_links a:hover {background:rgba(225,225,225, 0.5);text-shadow: 0px 0px 1px #000;}
+.introduction_links img {max-width:5vw;filter:grayscale(100%);}
+.introduction_links img:hover {filter:grayscale(0);}
+.introduction_links .even {text-align:right;padding-right:50%;animation:right_slide_in 1s linear;}
+.introduction_links .odd {text-align:left;padding-left:50%;animation:left_slide_in 1s linear;}
+
+/* #site_nav links */
+nav#site_nav a {transition:color 0.5s,text-shadow 0.5s ease-in-out;}
+nav#site_nav a:hover {text-shadow: 0px 0px 1px #000;}
+
+/* CV specific styles  */
+.introduction_links_vertical {list-style-type:none;position:absolute;top:5em;right:0;bottom:0;overflow:hidden;}
+.introduction_links_vertical img {max-width:4em;filter:grayscale(100%);}
+.introduction_links_vertical img:hover {max-width:4em;filter:grayscale(0);}
+.introduction_links_vertical li {margin-top:100vw;animation-delay:2s;animation:slide_up 2s forwards;}
+.cv_content_wrap {padding:1em 6em 1em 1em;}
+.box_list, .img_box_list {display:flex;flex-wrap:wrap;list-style-type:none;margin:1em 0;width:100%;min-width:400px;max-width:40em;}
+.box_list li {border-radius:0.2em;width:8em;height:2em;background:rgba(0,0,250,0.1);margin:0.5em 0.5em;padding:0.5em;
+	text-align:center;line-height:2em;font-weight:bold;}
+.img_box_list img {max-width:10em;transition:filter 0.2s ease-in-out;border-radius:0.5em;}
+.img_box_list img:hover {filter:grayscale(50%);}
+.img_box_list li {background:rgba(0,0,250,0.1);margin:0.5em 0.5em;border-radius:0.5em;}
+
+/* Shared page layput styles */
+.content_wrap {padding:1em;margin:0 auto;padding:1em 6em 1em 1em;}
+#site_footer p {margin:1em 0.4em 1em;}
+#site_footer {background:rgb(241,241,241);min-height:4em;min-width:400px;width:100%;padding:1em;box-sizing:border-box;color:rgb(90,90,90);
+position:absolute;bottom:0;border-top:1px solid rgb(220,220,220);}
+article header {background:rgb(90,90,90);color:rgb(250,250,250);
+	padding:1em 0;z-index:2;position:relative;top:0;width:100%;overflow:hidden;min-width:400px;
+    text-align:center;padding:0.5em;}
+article header .radial_stripes {
+	position:absolute;top:-22vw;left:30%;z-index:-1;
+	width:40vw;height:40vw;animation:rotate 30s infinite linear;
+}
+article {text-align:left;position:relative;margin:0 auto;padding: 0 0 4em;height:100%;}
+.article_img {float:right;width:35%;min-width:200px;margin:0 1em 1em;border-top-left-radius:20%;}
+article video {max-width:720px;display:block;margin:1em auto;width:100%;}
+#body_stripes_container {position:fixed;bottom:0;height:100%;width:100%;overflow:hidden;z-index:-1;}
+#body_stripes_container .radial_stripes {position:absolute;bottom:-65vw;left:-50%;width:100vw;height:100vw;opacity:0.4;animation:rotate 60s infinite linear;}
+
+nav#site_nav ol {display:flex;width:100%;list-style-type:none;background:rgb(241,241,241);border-bottom:1px solid rgb(220,220,220);height:2em;}
+nav#site_nav li {max-width:10em;margin:0 0 0 1em;font-size:1.5em;line-height:1.4em;}
+
+/* Images for reuse */
+.radial_stripes {background:url('data:image/svg+xml;utf8,<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1003.97 1009.5"><defs><style>.cls-1{fill-rule:evenodd;fill:url(#radial-gradient);}</style><radialGradient id="radial-gradient" cx="615.23" cy="557.75" r="503.37" gradientUnits="userSpaceOnUse"><stop offset="0" stop-opacity="0.5"/><stop offset="1" stop-color="#333" stop-opacity="0"/></radialGradient></defs><title>radial-stripes</title><path class="cls-1" d="M615.23,53V557.75L510.29,64ZM318.54,149.4,615.23,557.75,409.93,96.64Zm-140.44,156L615.23,557.75,240.13,220ZM113.24,505l502,52.76-480-156Zm21.94,208.74,480.05-156-502,52.76Zm105,181.76,375.1-337.74L178.1,810.13Zm169.8,123.37,205.3-461.11L318.54,966.1Zm205.3,43.64V557.75L510.29,1051.47Zm205.3-43.64L615.23,557.75l104.94,493.72Zm169.8-123.37L615.23,557.75,911.91,966.1Zm104.94-181.76-480-156,437.13,252.38ZM1117.21,505l-502,52.76,502,52.76Zm-64.85-199.62L615.23,557.75l480-156Zm-140.45-156L615.23,557.75,990.33,220ZM720.17,64,615.23,557.75,820.53,96.64Z" transform="translate(-113.24 -53)"/></svg>');}
+
+/* Animations */
+.fade_in_delayed {
+  opacity:0;
+  animation:fade_in_delayed 2s forwards;
+  animation-delay: 2s;
+   -webkit-animation-delay: 2s;
+}
+@keyframes left_slide_in {
+    from {padding-left:80%;opacity:0;}
+    to {padding-left:50%;opacity:1;}
+}
+@keyframes right_slide_in {
+    from {padding-right:80%;opacity:0;}
+    to {padding-right:50%;opacity:1;}
+}
+@keyframes slide_up {
+    from {margin-top:100vw;opacity:0;}
+    to {margin-top:0vw;opacity:1;}
+}
+@keyframes fade_in_delayed {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes rotate {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+/* For devices with tiny screen sizes */
+@media screen and (max-width:600px) {
+  #stripes {display:none;}
+  .introduction_links .even, .introduction_links .odd {text-align:center;padding:0;animation:none;}
+  h1 {font-size:9vw;}
+}
+@media screen and (max-width:550px) {
+  .article_img {float:none;width:100%;}
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="da">
+
+  <head>
+    <title>Kontakt | 1. Semester Portfolio | Multimediedesigner</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <style type="text/css">
+     form {margin:1em 0;}
+     form input {display:block;margin:0 0 1em;height:1.2em;padding:0.5em;width:40%;max-width:400px;}
+     form textarea {margin:0 0 1em;padding:0.5em;width:40%;min-width:400px;max-width:500px;min-height:5em;}
+
+     .button {width:8em;height:2em;background:rgba(100,100,250,0.3);border:none;cursor:pointer;border-radius:0.2em;}
+     .button:hover {background:rgba(100,100,250,0.5)}
+    </style>
+  </head>
+
+  <body>
+    <header id="site_header">
+      <nav id="site_nav">
+        <ol>
+         <li><a href="index.html">Forsiden</a></li>
+         <li><a href="cv-jacob.html">CV</a></li>
+         <li><a href="portfolio.html">Portfolio</a></li>
+         <li>Kontakt</li>
+        </ol>
+      </nav>
+    </header>
+
+  	<article>
+      <header>
+        <h1 class="fade_in_delayed">Kontakt</h1>
+        <div class="radial_stripes"></div>
+      </header>
+      <div class="content_wrap">
+       <img src="i/jacob.jpg" alt="Jacob" class="article_img">
+       <p>Tlf.: <i>+45 31662040</i></p>
+       <p>Send en mail:</p>
+       <form action="ninja.php" method="post">
+         <label for="name">Navn:</label>
+         <input type="text" name="name" id="name" placeholder="Dit navn">
+         <label for="email">E-mail:</label>
+         <input type="text" name="email" id="email" placeholder="john@example.com">
+         <label for="subject">Emne:</label>
+         <input type="text" name="subject" id="subject" placeholder="Emne">
+         <textarea name="msg_src" rows="4" cols="30" class="inputs" placeholder="Skriv din besked her..."></textarea>
+         <input type="submit" class="button" value="Send">
+        </form>
+      </div>
+  	</article>
+    <footer id="site_footer">
+     <p>Copyright © 2018</p>
+    </footer>
+    <div id="body_stripes_container">
+      <div class="radial_stripes"></div>
+    </div>
+  </body>
+
+ </html>
